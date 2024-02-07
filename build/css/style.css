@@ -1,0 +1,1203 @@
+/*
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --primary-color:#0F62FE;
+  --secondary-color:#495057;
+  --video-color:#495057;
+  --nav-bg-color:whitesmoke;
+  --nav-border-color: #2c3135;
+  --nav-CTA-button-bg-color: #0F62FE;
+  --nav-CTA-button-color: whitesmoke;
+  --nav-search-button: transparent;
+  --CTA-button-bg-color-hover:transparent;
+  --h1-video-font-color: whitesmoke;
+  --h1-video-font-shadow-color:black;
+  --h2-tripple-card-font-color:whitesmoke;
+  --h2-tripple-card-font-shadow-color:black;
+  --cta-cards-bg: #F2F4F8;
+  --book-cards-bg: #F2F4F8;
+  --book-cards-border: #d0d1d4;
+  --card-link-color: #0F62FE;
+  --footer-bg-color:#697077;
+  --footer-border-color: #2c3135;
+  --footer-font-color:whitesmoke;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dynamic-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-1024 {
+  max-width: 1024px;
+}
+
+.text-entry-bar {
+  border-width: 0 0 2px 0;
+  background: #F7F7F7;
+  /* padding all over .5 but 1rem left for cursor */
+  padding: 0.5rem;
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
+.text-entry-bar:focus {
+  outline: none;
+}
+
+header {
+  position: sticky;
+  width: 100vw;
+  top:0px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  background-color: var(--nav-bg-color);
+  border-color: var(--nav-border-color);
+  padding: 4px;
+  z-index: 2;
+}
+
+/* nav[role="main"] {
+    margin: 0 auto;
+} */
+
+.logo-icon p {
+  font-size: 1.2rem;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.logo-icon img {
+  max-height: 90px;
+  align-self: center;
+  /* Align w.r.t middle so center is flush */
+  vertical-align: middle;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  max-width: 2000px;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li .logo-icon {
+  padding-right: 4rem;
+}
+
+nav ul li .right-space {
+  padding-right: 8rem;
+}
+
+.nav-search {
+  .nav-search-entry {
+    display: flex;
+    gap: 1rem;
+    .nav-search-button {
+      min-width: 2.5rem;
+      border-width: 2px;
+      cursor: pointer;
+      margin-right: 0;
+      background-color: var(--nav-search-button);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 200ms;
+    }
+    .nav-search-button:hover {
+      filter: brightness(110%);
+    }
+  }
+}
+
+.nav-CTA {
+  background-color: var(--nav-CTA-button-bg-color);
+  padding: 0.5rem 1rem;
+  color: var(--nav-CTA-button-color);
+  transition: 200ms;
+}
+
+.nav-CTA:hover {
+  cursor: pointer;
+  filter: hue-rotate(90deg);
+}
+
+/* Standard CTA Button */
+
+.button-CTA {
+  background-color: var(--nav-CTA-button-bg-color);
+  padding: 0.5rem 1rem;
+  color: var(--nav-CTA-button-color);
+  transition: 200ms;
+}
+
+.inverse {
+  background-color: var(--nav-CTA-button-color);
+  color: var(--nav-CTA-button-bg-color);
+  border-width: 2px;
+  border-color: var(--nav-CTA-button-bg-color);
+}
+
+.button-CTA:hover {
+  filter: brightness(110%);
+  transform: scale(1.1, 1.1);
+  box-shadow: 4px 4px 0 2px ,8px 8px 0 2px var(--nav-CTA-button-bg-color);
+}
+
+.button-CTA.inverse:hover {
+  box-shadow: 4px 4px 0 2px var(--nav-CTA-button-color), 8px 8px 0 2px;
+}
+
+/* Start hero video section */
+
+.hero-section {
+  /* Relative, z index of -1 to hide, and top of -200 so we can cut off
+    some video that is not as visually interesting. Negative margin to bring
+    div below up. */
+  /* top: -200px; */
+  /* position: relative; */
+  z-index: -1;
+  /* margin-bottom: -40vw; */
+}
+
+.hero-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper.bigboy {
+  max-width: 3000px;
+}
+
+.hero-video h1 {
+  background-color: transparent;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  top: 200px;
+  /* min, preffered, max */
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 600;
+  color: whitesmoke;
+  text-shadow: 0 0 6px rgb(10, 9, 9);
+}
+
+.hero-video h1 span {
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  font-weight: 500;
+}
+
+.hero-video {
+  background: #495057;
+  width: 100%;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+}
+
+/* End hero video section */
+
+/* Start CTA Card */
+
+.card-CTA {
+  padding: 2rem;
+  background-color: var(--cta-cards-bg);
+  display: flex;
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  transition: 200ms;
+}
+
+.card-CTA.medium {
+  justify-content: space-around;
+  text-align: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.title h1{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.title h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card-CTA .title {
+  margin-bottom: 5rem;
+}
+
+.sub-text-box {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.sub-text-box.chp70 p{
+  max-width: 70ch;
+}
+
+.sub-text-box p {
+  max-width: 40ch;
+}
+
+.image-component {
+  height: auto;
+  width: auto;
+  max-height: 900px;
+}
+
+.image-component.medium {
+  max-height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+/* More info is relative and buttons absolute for now so
+different text heights on each side will stull result
+in buttons being flush
+*/
+
+.more-info {
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+
+.more-info .button-CTA {
+  position: absolute;
+  bottom: 5rem;
+}
+
+/* Start Getting Here Card */
+
+.getting-here {
+  background-color: var(--book-cards-bg);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.getting-here .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  border: 1px;
+  border-style: solid;
+  border-color: var(--book-cards-border);
+  width: 100%;
+}
+
+.getting-here .card p {
+  max-width: 40ch;
+}
+
+.card p:first-of-type {
+  padding-bottom: 1rem;
+}
+
+.links a {
+  font-weight: 500;
+  transition: 200ms;
+}
+
+.links a:hover {
+  animation: ease-in;
+  color: var(--card-link-color);
+}
+
+.card .links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-around;
+}
+
+/* End of Booking Cards */
+
+/* Testimonials */
+
+.center-card .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.center-card .text-component {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.center-card.card-bg {
+  background-color: var(--cta-cards-bg);
+  margin-bottom: 0;
+  padding: 2rem 0 1rem 0;
+}
+
+/* NOTE, this is for the email funnel and later fix for next project */
+
+.center-card .text-component p {
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+/* Start of Offer Funnel  */
+
+.email-offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.email-offer .text-entry-bar {
+  min-width: 40ch;
+}
+
+.email-offer .button-CTA {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+
+/* End of Email offer */
+
+/* Start of Tripple card offer  */
+
+/* NOTE: This was built with forethought as a basis for easily allowing the
+contents to wrap when the screen gets small. Other duplicate code here in the CSS, 
+will refactor later for other projects. */
+
+.card-offers {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  justify-content: space-between;
+  background-color: var(--cta-cards-bg);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card-offers.squeeze {
+  padding: 2vh 5vw
+}
+
+.card-offers.transparent {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  bottom: 15vw;
+  margin-bottom: -10vw;
+}
+
+/* First of every child in every .card-offer-header */
+
+.card-offers.transparent .card-offer-header :first-child {
+  color: var(--h2-tripple-card-font-color);
+  text-shadow: 0 0 0.25rem var(--h2-tripple-card-font-shadow-color);
+}
+
+.cta-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  max-height: 40vw;
+}
+
+.card-offers .m-0 {
+  margin-bottom: 0;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  /* max-width: 980px; */
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+.card-offer-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-offer-header .title h2, .cta-image {
+  margin-bottom: 2rem;
+}
+
+/* End of Tripple card offer  */
+
+/* Start of Gallery  */
+
+/* NOTE
+This took a long time to figure out how to create an equal space
+while still having the image flush. 
+
+If each image is a square and you want there to be space but still have the side
+images flush, then the max width/height has to be less than the max fill minus some space.
+
+Example, width: calc(100% - 2rem)
+Conversly, the main image then needs to have the opposite dimension subtracted:
+height: calc(100% - 2rem)
+
+
+
+
+
+*/
+
+.gallery-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--cta-cards-bg);
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: 1fr .25fr;
+  grid-template-rows:  repeat(4, .25fr);
+  gap: 0 0.5rem;
+}
+
+.main-image {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: calc(100% - 1rem);
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallary-image {
+  justify-self: end;
+  width: calc(100% - 1rem);
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.gallary-image.aspect1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.gallary-image:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.gallary-image.cta {
+  width: auto;
+}
+
+.gallary-image.cta:hover {
+  transform-style: preserve-3d;
+  /* transform: perspective(500px) translateZ(5px) rotateX(10deg); */
+  transform: scale(1.03, 1.03);
+}
+
+.img1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.img2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.img3 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.img4 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.gallery-container .title h1 {
+  margin-bottom: 2rem;
+}
+
+.offering {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offering p {
+  max-width: 30ch;
+  text-align: center;
+}
+
+/* End of Gallery  */
+
+/* Start of FAQ accordion */
+
+.collapse {
+  visibility: visible;
+}
+
+.center-pocket {
+  background-color: var(--cta-cards-bg);
+  padding: 2rem 4rem;
+  margin-bottom: 4rem;
+}
+
+.title.center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Start of Footer */
+
+nav[role="footer"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 4rem;
+  gap: 1rem;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-font-color);
+  border-color: var(--footer-border-color);
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+
+nav[role="footer"] ul {
+  justify-content: center;
+  gap: 4rem;
+}
+
+nav[role="footer"] ul li p{
+  transition: 200ms;
+}
+
+nav[role="footer"] ul li p:hover{
+  filter: brightness(130%);
+}
+
+nav[role="footer"] ul[class="social-media-icons"] {
+  gap: 1rem;
+}
+
+nav[role="footer"] p span{
+  font-size: small;
+  opacity: 80%;
+}
+
+/* End of footer */

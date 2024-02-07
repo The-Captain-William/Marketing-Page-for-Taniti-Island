@@ -7,8 +7,10 @@ console.log("hello world!");
 // the click will swap URLS if URLS are not already the same
 
 class Gallery {
+    #lastSavedElement
 
-    constructor(galleryImagesContainerID) {
+    constructor(galleryImagesContainerID, setMainImage) {
+        this.#lastSavedElement = '';        
 
         // model the gallery container
         this.galleryImagesContainer = document.getElementById(galleryImagesContainerID);
@@ -26,11 +28,18 @@ class Gallery {
                 this.galleryImagesArray[0].setAttribute('id', mainImageId);
                 this.mainImage = this.galleryImagesArray[0];
             }
+
+            if (setMainImage == true && i == 1) {
+                this.mainImage.src = this.galleryImagesArray[1].src;
+            }
+
+
             // add an event listener to the smaller images
             this.galleryImagesArray[i].addEventListener('click', (e) => this.#swapImage(e));
         }
 
     }
+
 
     #swapImage(e) {
         
@@ -42,17 +51,30 @@ class Gallery {
          *  now switching their src attribute. 
         */
         if (e.target.src !== this.mainImage.src) {
+
         // grab main image pic url and save
         const mainImageCopy = this.mainImage.src;
         
         // grab clicked image url
         const clickedImageCopy = e.target.src;
         
-        // make gallery src main src
-        e.target.src = mainImageCopy;
+        //grab last used gallery pic if there is none
+            if (this.#lastSavedElement == '') {
+                
+                // save element 
+                this.#lastSavedElement = e.target;
+                
 
-        // make main src gallery
-        this.mainImage.src = clickedImageCopy;
+            } else {
+                // if element was stored, copy src into main image
+                this.#lastSavedElement.src = mainImageCopy;
+    
+            }
+            // make main src clicked copy
+            this.mainImage.src = clickedImageCopy;
+            // make last saved the target
+            this.#lastSavedElement = e.target;
+
         }
 
     
@@ -66,7 +88,7 @@ class Gallery {
 // The main gallery image view should be the first element.
 
 document.addEventListener('DOMContentLoaded', () => {
-    const galleryOne = new Gallery('galleryOne');
-    const galleryTwo = new Gallery('galleryTwo');
-    const galleryThree = new Gallery('galleryThree');
+    const galleryOne = new Gallery('galleryOne', true);
+    const galleryTwo = new Gallery('galleryTwo', true);
+    const galleryThree = new Gallery('galleryThree', true);
   });
