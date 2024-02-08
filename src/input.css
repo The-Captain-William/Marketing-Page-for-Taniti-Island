@@ -2,35 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
     --primary-color:#0F62FE;
     --secondary-color:#495057;
     --video-color:#495057;
     
+    --body-bg-color:#0c0c0c;
+
     --nav-bg-color:whitesmoke;
     --nav-border-color: #2c3135;
-    --nav-CTA-button-bg-color: #0F62FE;
-    --nav-CTA-button-color: whitesmoke;
-    --nav-search-button: transparent;
+
+    --nav-font-color:rgb(184, 182, 182);
+
+
+    --nav-CTA-button-bg-color: gold;
+    --nav-CTA-button-color: black;
+    
+    --nav-search-button: rgb(184, 182, 182, 0.1);
+
 
     --CTA-button-bg-color-hover:transparent;
 
-    --h1-video-font-color: whitesmoke;
+    --h1-video-font-color: white;
     --h1-video-font-shadow-color:black;
+    --h1-gallery-color:whitesmoke;
+
 
     --h2-tripple-card-font-color:whitesmoke;
     --h2-tripple-card-font-shadow-color:black;
 
+    /* Keep these the same */
+    --cta-cards-bg: #1c2027;
+    --book-cards-bg: #1c2027;
 
-    --cta-cards-bg: #F2F4F8;
-    --book-cards-bg: #F2F4F8;
-    --book-cards-border: #d0d1d4;
-    --card-link-color: #0F62FE;
+    --p-gallary-card-offer-color:whitesmoke;
+    /* air and sea cards */
+    --p-book-cards-color:whitesmoke;
+    /* --book-cards-border: #c7c8ca; */
+    --book-cards-border:gold;
+    --book-cards-foreground: rgb(27, 27, 27);
+    --card-link-color: white;
 
-    --footer-bg-color:#697077;
+
+
+    /* footer */
+    --footer-bg-color:var(--cta-cards-bg);
     --footer-border-color: #2c3135;
-    --footer-font-color:whitesmoke;
+    --footer-font-color:var(--nav-font-color);
 
+}
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+p, h1, h2, .material-symbols-outlined {
+    cursor: default;
+}
+
+.material-symbols-outlined {
+    color: var(--p-book-cards-color);
+}
+
+.material-symbols-outlined.penline {
+    font-size: 48px;
+    position: relative;
+    left: 20px;
+    top: 4px;
+    /* did this by accident but looks cool af */
+    transform: rotateX(80deg);
+}
+
+.material-symbols-outlined.zipline {
+    position: relative;
+    right: 22px;
+    top:3px;
+}
+
+.material-symbols-outlined.bowling {
+    position: absolute;
+    font-size: 16px;
+}
+
+.bowling-box {
+    position: relative;
+}
+
+.card-offers.transparent .material-symbols-outlined {
+    font-size: 30px;
+    display: block;
+    
+}
+
+
+
+.text-component p, h2 {
+    color: var(--p-book-cards-color);
 }
 
 
@@ -45,6 +113,29 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/*  accordion*/
+.accordion-item {
+    background-color: var(--book-cards-foreground);
+    color: var(--p-book-cards-color);
+    border-color: var(--nav-border-color);
+}
+
+.accordion-button {
+    color: var(--nav-font-color);
+    background-color: var(--cta-cards-bg);
+}
+
+.accordion-button:focus {
+    --bs-accordion-btn-focus-box-shadow: gold;
+}
+
+
+.accordion {
+    --bs-accordion-active-bg: var(--body-bg-color);
+    --bs-accordion-active-color: white;
 }
 
 
@@ -73,11 +164,23 @@ header {
     top:0px;
     border-style: solid;
     border-width: 0 0 1px 0;
-    background-color: var(--nav-bg-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter:blur(5px);
     border-color: var(--nav-border-color);
     padding: 4px;
     z-index: 2;
 }
+
+header a {
+    color: var(--nav-font-color);
+    transition: 200ms;
+}
+
+header a:hover {
+    animation: ease-in;
+    color: white;
+}
+
 
 /* nav[role="main"] {
     margin: 0 auto;
@@ -122,12 +225,11 @@ nav ul li .right-space {
 .nav-search {        
     .nav-search-entry {
         display: flex;
-        gap: 1rem;
 
 
         .nav-search-button {
             min-width: 2.5rem;
-            border-width: 2px;
+            border-width: 0 0 2px 0;
             cursor: pointer;
             margin-right: 0;
             background-color: var(--nav-search-button);
@@ -137,9 +239,18 @@ nav ul li .right-space {
             transition: 200ms;
         }
 
+        .text-entry-bar {
+            background-color: var(--nav-search-button);
+            color: var(--nav-font-color);
+        }
+
+        .nav-search-button {
+            transition: 200ms;
+            fill: var(--nav-font-color)
+        }
 
         .nav-search-button:hover {
-            filter: brightness(110%);
+            fill:white;
         }
     }
 }
@@ -153,8 +264,9 @@ nav ul li .right-space {
 
 .nav-CTA:hover {
     cursor: pointer;
-    filter: hue-rotate(90deg);
+    background-color: rgb(255, 238, 0);
 }
+
 
 
 /* Standard CTA Button */
@@ -175,7 +287,7 @@ nav ul li .right-space {
 }
 
 .button-CTA:hover {
-    filter: brightness(110%);
+    /* filter: brightness(110%); */
     transform: scale(1.1, 1.1);
     box-shadow: 4px 4px 0 2px ,8px 8px 0 2px var(--nav-CTA-button-bg-color);
 }
@@ -208,7 +320,6 @@ nav ul li .right-space {
 }
 
 .hero-video h1 {
-    background-color: transparent;
     position: absolute;
     text-align: center;
     z-index: 1;
@@ -216,7 +327,7 @@ nav ul li .right-space {
     /* min, preffered, max */
     font-size: clamp(2rem, 5vw, 3.6rem);
     font-weight: 600;
-    color: whitesmoke;
+    color: var(--h1-video-font-color);
     text-shadow: 0 0 6px rgb(10, 9, 9);
 }
 
@@ -227,7 +338,8 @@ nav ul li .right-space {
 
 
 .hero-video {
-    background: #495057;
+    position: relative;
+    bottom: 30px;
     width: 100%;
     height: 700px;
     object-fit: cover;
@@ -254,7 +366,6 @@ nav ul li .right-space {
 
 .card-CTA.medium {
     justify-content: space-around;
-    text-align: center;
     column-gap: 2rem;
 }
 
@@ -262,12 +373,16 @@ nav ul li .right-space {
 .title h1{
     font-size: 3rem;
     font-weight: 500;
+    color: whitesmoke;
 }
 
 .title h2{
     font-size: 2rem;
     font-weight: 500;
 }
+
+
+
 
 .card-CTA .title {
     margin-bottom: 5rem;
@@ -277,6 +392,7 @@ nav ul li .right-space {
     display: flex;
     justify-content: space-between;
     row-gap: 2rem;
+    gap:1.5rem;
 
 }
 
@@ -285,7 +401,7 @@ nav ul li .right-space {
 }
 
 .sub-text-box p {
-    max-width: 40ch;
+    max-width: 70ch;
 }
 
 .image-component {
@@ -329,10 +445,11 @@ in buttons being flush
 }
 
 .getting-here .card {
+    color: var(--p-book-cards-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--book-cards-foreground);
     padding: 2rem;
     text-align: center;
     border: 1px;
@@ -345,13 +462,17 @@ in buttons being flush
     max-width: 40ch;
 }
 
+
+
 .card p:first-of-type {
     padding-bottom: 1rem;
+    color: var(--book-cards-border);
 }
 
 .links a {
     font-weight: 500;
     transition: 200ms;
+    color:rgb(184, 182, 182);
 }
 
 .links a:hover {
@@ -426,9 +547,11 @@ will refactor later for other projects. */
     display: flex;
     column-gap: 2rem;
     justify-content: space-between;
+    align-items: flex-start;
     background-color: var(--cta-cards-bg);
     padding: 2rem;
     margin-bottom: 3rem;
+    color: var(--p-gallary-card-offer-color);
 }
 
 .card-offers.squeeze {
@@ -515,7 +638,8 @@ height: calc(100% - 2rem)
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: var(--cta-cards-bg);
+    background-color: var(--book-cards-bg);
+    backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
 }
@@ -612,6 +736,7 @@ height: calc(100% - 2rem)
 
 .gallery-container .title h1 {
     margin-bottom: 2rem;
+    color: var(--h1-gallery-color);
 }
 
 .offering {
@@ -637,14 +762,22 @@ height: calc(100% - 2rem)
 
 
 .center-pocket {
-    background-color: var(--cta-cards-bg);
+    background-color: transparent;
     padding: 2rem 4rem;
     margin-bottom: 4rem;
 }
 
+
+
 .title.center {
     text-align: center;
     margin-bottom: 2rem;
+}
+
+/* Content Zoom origins */
+#culture, #nightlife, #games, #volcano, #beaches, #rainforest {
+    position: relative;
+    bottom:70px;
 }
 
 
@@ -676,6 +809,17 @@ nav[role="footer"] ul li p{
 nav[role="footer"] ul li p:hover{
     filter: brightness(130%);
 }
+
+nav[role="footer"] ul li a{
+    transition: 200ms;
+}
+
+
+nav[role="footer"] ul li a:hover{
+    filter: brightness(130%);
+}
+
+
 
 nav[role="footer"] ul[class="social-media-icons"] {
     gap: 1rem;
