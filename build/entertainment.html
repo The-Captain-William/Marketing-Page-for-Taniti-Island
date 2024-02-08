@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adventure in Taniti</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +36,9 @@
                             <input class="text-entry-bar" type="text" placeholder="Search for...">
                         </form>
                         <button class="nav-search-button">
-                            <img src="images/vector/Search.svg" alt="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                              </svg>
                         </button>
                     </div>
                 </li>
@@ -66,7 +69,6 @@
     <div class="dynamic-wrapper">
         <div class="card-offers transparent">
             <div class="card-offer-header">
-                <p>😉</p>
                 <div class="title">
                     <h2>Our Culture</h2>
                 </div>
@@ -77,18 +79,16 @@
             </div>
     
             <div class="card-offer-header">
-                <p>😉</p>
                 <div class="title">
                     <h2>Pubs & Nightlife</h2>
                 </div>
                 <a class="gallary-image cta" href="entertainment.html#nightlife">
                     <img class="cta-image" src="images/entertainment/nightlife/antoine-j-r3XvSBEQQLo-unsplash.jpg" alt="">
                 </a>
-                <p>Our premiere nightclub awaits with open doors and a pulsating dance floor.</p>
+                <p>Our nightclub awaits with open doors.</p>
             </div>
 
             <div class="card-offer-header">
-                <p>😉</p>
                 <div class="title">
                     <h2>Fun & Games</h2>
                 </div>
@@ -110,7 +110,8 @@
         <div class="card-offers squeeze">
             <div class="gallery-container">
                 <div class="title">
-                    <a id="culture"><h1>Taniti City</h1></a>
+                    <a id="culture"></a>
+                    <h1>Taniti City</h1>
                 </div>
                 <div class="gallery-images" id="galleryOne">
                     
@@ -129,15 +130,15 @@
                 </div>
                 <div class="card-offers m-0">
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">history_edu</div></span></p>
                         <p>Delve into the rich history and heritage of Taniti at our local history museum. </p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">palette</div></span></p>
                         <p>For art enthusiasts, Taniti City boasts several galleries showcasing the work of local artists.</p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">pedal_bike</div></span></p>
                         <p>Beyond the museum and galleries, Taniti City itself is a living exhibit. Easily travel around on foot, bike, or rental car.</p>
                     </div>
                 </div>
@@ -155,9 +156,8 @@
         <div class="card-offers squeeze">
             <div class="gallery-container">
                 <div class="title">
-                    <a id="nightlife">
+                    <a id="nightlife"></a>
                         <h1>Pubs & Nightlife </h1>
-                    </a>
                 </div>
                 <div class="gallery-images" id="galleryTwo">
                     
@@ -178,15 +178,15 @@
                 </div>
                 <div class="card-offers m-0">
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">sports_bar</div></span></p>
                         <p>Merriton Landing is home to a variety of pubs, including a unique microbrewery.</p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">nightlife</div></span></p>
                         <p>Our premiere nightclub features local and international DJs.</p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">local_Bar</div></span></p>
                         <p>Sip on exotic cocktails or enjoy a cold brew in one of our island bars.</p>
                     </div>
                 </div>
@@ -226,15 +226,20 @@
                 </div>
                 <div class="card-offers m-0">
                     <div class="offering">
-                        <p>😎</p>
+                        <p><span><div class="material-symbols-outlined">joystick</div></span></p>
                         <p>Packed with classic and modern games, the local arcade is a hit for visitors of all ages. </p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <p class="bowling-box">
+                            <span>
+                                <div class="material-symbols-outlined bowling">atr</div>
+                                <div class="material-symbols-outlined ">circle</div>
+                            </span>
+                        </p>
                         <p>Our bowling alley offers a fantastic mix of entertainment and competition. </p>
                     </div>
                     <div class="offering">
-                        <p>😎</p>
+                        <div class="material-symbols-outlined">scoreboard</div>
                         <p>Challenge your friends to some games, or try to beat a high score!</p>
                     </div>
                 </div>
@@ -261,11 +266,9 @@
                         <h2>Our local movie theatre</h2>
                     </div>
                     
-                    <div class="sub-text-box">
-                        
+                    <div class="sub-text-box">                        
                         <div class="more-info">
-                            <img src="" alt="">
-                            <p>😀</p>
+                            <p><span><div class="material-symbols-outlined">theaters</div></span></p>
                             <p>Take out your family or a date to our local movie theatre for a truly memorable evening.</p>
                         </div>
                     </div> 
@@ -322,9 +325,10 @@
                 <p><a href="#">Taniti</a></p>
                 </div>
             </li>
-            <li><p><a href="#">Getting to Taniti</a></p></li>
-            <li><p><a href="#">Transport in Taniti</a></p></li>
-            <li><p><a href="#">Currency Exchange</a></p></li>
+            <li><p><a href="FAQ.html">Getting to Taniti</a></p></li>
+            <li><p><a href="FAQ.html">Transport in Taniti</a></p></li>
+            <li><p><a href="FAQ.html">Currency Exchange</a></p></li>
+            <li><p><a href="attribution.html">Attribution</a></p></li>
         </ul>
         <ul class="social-media-icons">
             <li>
