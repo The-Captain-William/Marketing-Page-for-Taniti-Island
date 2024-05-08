@@ -704,31 +704,33 @@ header {
   z-index: 2;
 }
 
+
+#logo-clickhome, #logo-clickhome a {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 80%;
+}
+
+
+
 header a {
   color: var(--nav-font-color);
   transition: 200ms;
 }
+
 
 header a:hover {
   animation: ease-in;
   color: white;
 }
 
-/* nav[role="main"] {
-    margin: 0 auto;
-} */
 
-.logo-icon p {
-  font-size: 1.2rem;
-  margin-top: 0.125rem;
-  margin-bottom: 0.125rem;
-}
 
-.logo-icon img {
-  max-height: 90px;
-  align-self: center;
-  /* Align w.r.t middle so center is flush */
-  vertical-align: middle;
+#hamburger {
+  color: var(--nav-font-color);
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
 }
 
 nav ul {
@@ -871,6 +873,15 @@ nav ul li .right-space {
 
 /* Start CTA Card */
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 @media (max-width: 1590px) {
   .card-CTA {
       flex-direction: column;
@@ -918,28 +929,53 @@ nav ul li .right-space {
   }
 
   /*header*/
-  
-  header {
-    display: none;
+  #hamburger {
+    display: block;
   }
 
-  .wrapper.bigboy {
-    display: none;
+
+  header {
+    text-align: end;
+    position: fixed;
   }
+
+
+
+  #main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    animation: fadeIn 1s both;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  #main-nav .right-space {
+    padding: 0;
+  }
+
+  .hero-video {
+    position: static;
+  }
+
 
   /*footer*/
   nav[role="footer"] ul:first-of-type {
     flex-direction: column;
     gap: 0.5rem;
   } 
-  
-  
-  nav ul li .logo-icon {
-    padding: 0;
+
+
+}
+
+@media(max-width: 800px) {
+  #main-nav {
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    gap: 1rem;
   }
-
-
-
+  
 }
 
 .card-CTA {

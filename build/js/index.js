@@ -1,5 +1,3 @@
-console.log("hello world!");
-
 // I can model the gallery as a class object
 // Each image is an element in HTML, but also an attribute of the class (attribute in a class sense, not HTML sense)
 // Each small image has an event listener attached
@@ -82,13 +80,62 @@ class Gallery {
 
 }
 
-// Make sure the DOM is loaded before we start manipulating the web-page.
-// This strat will work for any number of galleries on any web pages, irrespective of any # of images in a gallery.
-// All you have to do is give the gallery an ID name and use it as a parameter when constructing a gallery object.
-// The main gallery image view should be the first element.
+// 'hamburger'
+// 'main-nav'
+class NavHeader {
+    // icon for the menu, and the menu hidden in desktop mode
+    constructor(hamburgerMenuIcon, menuItems) {
+        this.hamburgerMenuIcon = document.getElementById(hamburgerMenuIcon);
+        this.menuItems = document.getElementById(menuItems);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const galleryOne = new Gallery('galleryOne', true);
-    const galleryTwo = new Gallery('galleryTwo', true);
-    const galleryThree = new Gallery('galleryThree', true);
-  });
+        // init event listener
+        this.hamburgerMenuIcon.addEventListener('click', () => {
+            let currentMenuItemsStyle = window.getComputedStyle(this.menuItems);     
+        
+            let returnDisplayType = currentMenuItemsStyle.display == 'none' ? 'flex' : 'none';
+        
+            this.menuItems.style.display = returnDisplayType;
+        
+        })
+
+        
+    }
+
+}
+
+
+
+
+// pop returns the last element
+let pageName = window.location.pathname.split('/').pop();
+
+
+if (pageName != ('index.html' || 'faq.html')) {
+    // Make sure the DOM is loaded before we start manipulating the web-page.
+    document.addEventListener('DOMContentLoaded', () => {
+    // This strat will work for any number of galleries on any web pages, irrespective of any # of images in a gallery.
+    // All you have to do is give the gallery an ID name and use it as a parameter when constructing a gallery object.
+    // The main gallery image view should be the first element.
+        try {
+            const galleryOne = new Gallery('galleryOne', true);
+            const galleryTwo = new Gallery('galleryTwo', true);
+            const galleryThree = new Gallery('galleryThree', true);
+        } catch (TypeError) {
+            console.log(TypeError);
+        }
+      });
+}
+
+const menu = new NavHeader('hamburger', 'main-nav');
+
+
+
+
+
+
+
+
+
+
+
+
