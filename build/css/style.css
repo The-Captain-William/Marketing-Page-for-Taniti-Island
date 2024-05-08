@@ -871,6 +871,77 @@ nav ul li .right-space {
 
 /* Start CTA Card */
 
+@media (max-width: 1590px) {
+  .card-CTA {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  .card-CTA  .text-component .title {
+    margin-bottom: 0;
+  }
+
+  .text-component .sub-text-box {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+  
+  .sub-text-box .more-info {
+    align-content: center;
+    
+  }
+
+  .sub-text-box .more-info .button-CTA{
+    position: static;
+    margin-top: 2rem;
+    font-size: large;
+  }
+
+  .card-CTA div:has(.image-component) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .getting-here {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .center-card {
+    padding: 0 1rem;
+  }
+
+  .center-card .title {
+    text-align: center;
+  }
+
+  /*header*/
+  
+  header {
+    display: none;
+  }
+
+  .wrapper.bigboy {
+    display: none;
+  }
+
+  /*footer*/
+  nav[role="footer"] ul:first-of-type {
+    flex-direction: column;
+    gap: 0.5rem;
+  } 
+  
+  
+  nav ul li .logo-icon {
+    padding: 0;
+  }
+
+
+
+}
+
 .card-CTA {
   padding: 2rem;
   background-color: var(--cta-cards-bg);
