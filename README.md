@@ -2,7 +2,7 @@
 
 <div align="center">
 <h2> Link to Site 👇🏻</h2>
-<h3> 👉🏻 Click <a href="https://the-captain-william.github.io/taniti/build/index.html">here</a> to see the live site deployed on GitHub. 👈🏻</h3>
+<h3> 👉🏻 Click <a href="https://the-captain-william.github.io/Marketing-Page-for-Taniti-Island/">here</a> to see the live site deployed on GitHub. 👈🏻</h3>
 ✔ The site is responsive and can handle different screen sizes.
 </div>
 
@@ -10,8 +10,8 @@
 
 
 ## More Links:
-<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/blob/187e2dbc928a2be6b20a81b323bfaddf0d767c92/Timeline%20and%20Persona.pdf">here</a> to see a PDF breakdown of market research and UI/UX feedback.</h4>
-<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/tree/187e2dbc928a2be6b20a81b323bfaddf0d767c92/UX%20-%20Taniti%20low%20fidelity%20mockups">here</a> to be directed to a collection of low fidelity designs I created in Figma.</h4>
+<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/blob/b507709be71865711ee27832ed00769c854dac84/docs/Timeline%20and%20Persona.pdf">here</a> to see a PDF breakdown of market research and UI/UX feedback.</h4>
+<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/tree/b507709be71865711ee27832ed00769c854dac84/docs/UX%20-%20Taniti%20low%20fidelity%20mockups">here</a> to be directed to a collection of low fidelity designs I created in Figma.</h4>
 
 ## Details:
 
