@@ -90,11 +90,13 @@ class NavHeader {
 
         // init event listener
         this.hamburgerMenuIcon.addEventListener('click', () => {
+            
             let currentMenuItemsStyle = window.getComputedStyle(this.menuItems);     
-        
+            
             let returnDisplayType = currentMenuItemsStyle.display == 'none' ? 'flex' : 'none';
-        
+            
             this.menuItems.style.display = returnDisplayType;
+            
         
         })
 
