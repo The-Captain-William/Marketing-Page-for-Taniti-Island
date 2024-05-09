@@ -726,6 +726,16 @@ header a:hover {
 
 
 
+#main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  animation: fadeIn 1s both;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 #hamburger {
   color: var(--nav-font-color);
   font-size: 3rem;
@@ -872,7 +882,6 @@ nav ul li .right-space {
 /* End hero video section */
 
 /* Start CTA Card */
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -882,7 +891,9 @@ nav ul li .right-space {
   }
 }
 
+/* Tablet or small screen*/
 @media (max-width: 1590px) {
+  /* Cards */
   .card-CTA {
       flex-direction: column;
       text-align: center;
@@ -940,16 +951,10 @@ nav ul li .right-space {
   }
 
 
-
   #main-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3rem;
-    animation: fadeIn 1s both;
-    width: fit-content;
-    margin: 0 auto;
+    display: none;
   }
+
 
   #main-nav .right-space {
     padding: 0;
@@ -966,17 +971,86 @@ nav ul li .right-space {
     gap: 0.5rem;
   } 
 
+  /*The 3 CTA Info cards*/
+
+  .card-offers.transparent {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+
+  }
+
+  .gallery-images  {
+    grid-template-columns: repeat(4, .25fr) !important;
+    grid-template-rows: 1fr .25fr !important;
+  }
+
+  .gallery-images .main-image {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+  .aspect1 {
+    width: fit-content !important;
+    height: fit-content !important;
+  }
+
+  .gallery-images :nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .gallery-images :nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .gallery-images :nth-child(4) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .gallery-images :nth-child(5) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
+  .card-offers.squeeze {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .card-offers .m-0 {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
 }
 
+/* Cellphone */
 @media(max-width: 800px) {
   #main-nav {
     flex-direction: column;
     margin: 0 auto 0 auto;
     gap: 1rem;
   }
-  
+ 
+
 }
+
+
 
 .card-CTA {
   padding: 2rem;
@@ -1425,6 +1499,10 @@ nav[role="footer"] ul[class="social-media-icons"] {
 nav[role="footer"] p span{
   font-size: small;
   opacity: 80%;
+}
+
+nav ul li .logo-icon {
+  padding: 0;
 }
 
 /* End of footer */
