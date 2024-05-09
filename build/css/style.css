@@ -1037,6 +1037,15 @@ nav ul li .right-space {
     gap: 2rem;
   }
 
+  .email-offer{
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .email-offer .text-entry-bar {
+    min-width: 80% !important;
+  }
+
 }
 
 /* Cellphone */
