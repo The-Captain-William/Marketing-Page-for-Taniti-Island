@@ -1,7 +1,19 @@
 
-## Introduction
-<h3>Click <a href="https://the-captain-william.github.io/taniti/build/index.html">here</a> to see the live site deployed on GitHub.</h3>
+
+<div align="center">
+<h2> Link to Site 👇🏻</h2>
+<h3> 👉🏻 Click <a href="https://the-captain-william.github.io/taniti/build/index.html">here</a> to see the live site deployed on GitHub. 👈🏻</h3>
 ✔ The site is responsive and can handle different screen sizes.
+</div>
+
+![image](https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/assets/112818936/58b9b1d6-9d06-4b37-ac12-f89bdf8928dd)
+
+
+## More Links:
+<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/blob/187e2dbc928a2be6b20a81b323bfaddf0d767c92/Timeline%20and%20Persona.pdf">here</a> to see a PDF breakdown of market research and UI/UX feedback.</h4>
+<h4>Click <a href="https://github.com/The-Captain-William/Marketing-Page-for-Taniti-Island/tree/187e2dbc928a2be6b20a81b323bfaddf0d767c92/UX%20-%20Taniti%20low%20fidelity%20mockups">here</a> to be directed to a collection of low fidelity designs I created in Figma.</h4>
+
+## Details:
 
 #### What this repo is about, and how it was made
 This is a mockup/prototype website for a faux island known as the island of Taniti. 
