@@ -843,7 +843,7 @@ nav ul li .right-space {
   column-gap: 2rem;
   row-gap: 2rem;
   justify-content: center;
-  bottom: 60px
+  bottom: 70px
 }
 
 .hero-text-container {
@@ -1340,7 +1340,7 @@ will refactor later for other projects. */
 .card-offers.transparent {
   background-color: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 4;
   bottom: 15vw;
   margin-bottom: -10vw;
 }
