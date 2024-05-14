@@ -989,7 +989,7 @@ nav ul li .right-space {
 
   header {
     text-align: end;
-    position: sticky;
+    position: fixed;
     z-index: 7;
   }
 
@@ -1102,17 +1102,28 @@ nav ul li .right-space {
  
 }
 
+/* When header bottom is lifted up some x pixels,
+we offset with a negative margin bottom to bring the 
+lower contents closer to us. 
+
+when our bottom is zero, we have no need for a margin bottom less than zero,
+so we can push contents back down. 
+
+This is to give a sliver of black space between the hero section and the first card.*/
 @media(max-width:430px) {
   .hero-container {
-    bottom: 100px;
+    bottom: 0;
     text-align: center;
-    margin-bottom: -40px;
+    margin-bottom: 3rem;
   }
 
   .hero-container {
     height: 60vh;
   }
 
+  nav[role="footer"] p {
+    text-align: center;
+  }
 
 
 }
