@@ -1021,7 +1021,12 @@ nav ul li .right-space {
     flex-direction: column;
     align-items: center;
     margin-top: 10vw;
+    text-align: center;
+    row-gap: 2rem;
+  }
 
+  .card-offers.transparent .card-offer-header .gallary-image.cta .cta-image {
+    margin-bottom: 0.2rem;
   }
 
   .gallery-images  {
