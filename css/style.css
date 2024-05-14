@@ -701,7 +701,7 @@ header {
           backdrop-filter:blur(5px);
   border-color: var(--nav-border-color);
   padding: 4px;
-  z-index: 2;
+  z-index: 7;
 }
 
 
@@ -832,31 +832,71 @@ nav ul li .right-space {
 
 /* Start hero video section */
 
-.hero-section {
-  /* Relative, z index of -1 to hide, and top of -200 so we can cut off
-    some video that is not as visually interesting. Negative margin to bring
-    div below up. */
-  /* top: -200px; */
-  /* position: relative; */
-  z-index: -1;
-  /* margin-bottom: -40vw; */
-}
-
-.hero-video {
+.hero-container {
+  z-index: 3;
   display: flex;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  column-gap: 2rem;
+  row-gap: 2rem;
   justify-content: center;
-  align-items: center;
+  bottom: 60px
 }
 
-.wrapper.bigboy {
+.hero-text-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text-wrap {
+  z-index: 3;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.hero-bg-image {
+  position: absolute;
+}
+
+.video-embed {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: 16/9;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: 100%;
   max-width: 3000px;
 }
 
-.hero-video h1 {
+.hero-video {
   position: absolute;
-  text-align: center;
-  z-index: 1;
-  top: 200px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.hero-text-wrap h1 {
   /* min, preffered, max */
   font-size: clamp(2rem, 5vw, 3.6rem);
   font-weight: 600;
@@ -864,9 +904,11 @@ nav ul li .right-space {
   text-shadow: 0 0 6px rgb(10, 9, 9);
 }
 
-.hero-video h1 span {
+.hero-text-wrap p span {
   font-size: clamp(1.5rem, 4.5vw, 2.5rem);
   font-weight: 500;
+  color: var(--h1-video-font-color);
+  text-shadow: 0 0 6px rgb(10, 9, 9);
 }
 
 .hero-video {
@@ -947,7 +989,8 @@ nav ul li .right-space {
 
   header {
     text-align: end;
-    position: fixed;
+    position: sticky;
+    z-index: 7;
   }
 
 
@@ -960,10 +1003,11 @@ nav ul li .right-space {
     padding: 0;
   }
 
-  /* .hero-video {
-    position: static;
-  } */
-
+  .hero-container {
+    bottom: 100px;
+    text-align: center;
+    margin-bottom: -40px;
+  }
 
   /*footer*/
   nav[role="footer"] ul:first-of-type {
@@ -1056,8 +1100,24 @@ nav ul li .right-space {
     gap: 1rem;
   }
  
+}
+
+@media(max-width:430px) {
+  .hero-container {
+    bottom: 100px;
+    text-align: center;
+    margin-bottom: -40px;
+  }
+
+  .hero-container {
+    height: 60vh;
+  }
+
+
 
 }
+ 
+
 
 
 
